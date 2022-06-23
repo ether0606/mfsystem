@@ -30,13 +30,13 @@ class CreatePatientsTable extends Migration
             $table->string('marital_status');
             $table->double('treatment_cost',14,2);
             $table->double('apply_amount',14,2);
-            $table->string('contact_no');
-            $table->string('alter_contactno')->nullable();
-            $table->string('family_member');
+            $table->string('contact');
+            $table->string('alt_contact')->nullable();
+            $table->string('family_member')->nullable();
             $table->string('present_address')->nullable();
             $table->string('permanent_address')->nullable();
             $table->string('nid_birthid');
-            $table->string('picture')->nullable();
+            $table->string('photo')->nullable();
             $table->string('pdf_documents')->nullable();
             $table->string('id_card_font')->nullable();
             $table->string('id_card_back')->nullable();

@@ -13,7 +13,7 @@ class CreateRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,28 @@ class CreateRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            "name" => "required",
+            "patient_occupation" => "required",
+            "father" => "required",
+            "father_occupation" => "required",
+            "mother" => "required",
+            "mother_occupation" => "required",
+            "disease_name" => "required",
+            "age" => "required",
+            "disease_description" => "required",
+            "marital_status" => "required",
+            "treatment_cost" => "required",
+            "apply_amount" => "required",
+            "contact" => "required",
+            "present_address" => "required",
+            "permanent_address" => "required",
+            "status" => "required"
+        ];
+    }
+
+    public function message(){
+        return [
+            'required' => 'The :attribute field is required'
         ];
     }
 }
